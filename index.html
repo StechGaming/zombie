@@ -18,12 +18,8 @@
     var old_position;
     var tolerance = 10;
     // Add proper lat/lng here instead of zeroes
-    var data = `0 0 zombie.png
-    0 0 hospital.png
-    0 0 weapons.png
-    0 0 weapons.png
-    0 0 weapons.png
-    0 0 weapons.png`;
+    var data = `-37.7946450987465210 145.0416679083675216 zombie.png
+                -37.7944209834627105  145.0416170192837465 weapons.png`;
     // Split the data into an array of lines of data
     var markers = data.split("\n");
     // Save the locations of all markers
@@ -32,7 +28,7 @@
         // SET YOUR OWN CENTER OF THE MAP
         zombie_map = new google.maps.Map(document.getElementById('zombie_map'), {
             zoom: 10,
-            center: {lat: 0, lng: 0}
+            center: {lat: -37.794645, lng: 145.041667}
         });
         // Get geolocation
         if( navigator.geolocation) {
